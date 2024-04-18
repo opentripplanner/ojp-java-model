@@ -8,6 +8,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 profile
+junkyard/
 .idea
 *.iml
 src/main/resources/xsd/
