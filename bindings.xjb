@@ -1,8 +1,10 @@
 <jxb:bindings xmlns:jxb="https://jakarta.ee/xml/ns/jaxb"
               xmlns:xs="http://www.w3.org/2001/XMLSchema"
               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jxb:version="3.0" jxb:extensionBindingPrefixes="xjc">
-    
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+							jxb:version="3.0"
+							jxb:extensionBindingPrefixes="xjc">
+
 	<jxb:bindings>
 		<jxb:globalBindings underscoreBinding="asCharInWord">
 <!--			<xjc:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime" adapter="org.rutebanken.util.LocalDateTimeISO8601XmlAdapter" /> -->
@@ -17,8 +19,7 @@
 
 	<jxb:bindings schemaLocation="./src/main/resources/xsd/1.0.3/OJP.xsd">
 		<jxb:schemaBindings>
-			<jxb:package name="de.vdv.ojp.model" />
+			<jxb:package name="de.vdv.ojp.model"/>
 		</jxb:schemaBindings>
 	</jxb:bindings>
-
 </jxb:bindings>
