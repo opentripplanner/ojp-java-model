@@ -11,4 +11,5 @@ profile
 junkyard/
 .idea
 *.iml
+*.zip
 src/main/resources/xsd/
