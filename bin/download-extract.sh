@@ -1,4 +1,4 @@
-# !/bin/bash
+# !/bin/bash -e
 
 # Downloads and extracts VDVDE
 
@@ -25,6 +25,6 @@ mkdir -p $DESTINATION_PATH
 echo $PROFILE_PATH/${VDVDE_REPO}-${GIT_BRANCH}
 
 cp -r $PROFILE_PATH/${VDVDE_REPO}-${GIT_BRANCH}/* $DESTINATION_PATH/.
-cp -r ./xml $DESTINATION_PATH/.
+#cp -r ./xml $DESTINATION_PATH/.
 
 # rm $ZIPFILE
