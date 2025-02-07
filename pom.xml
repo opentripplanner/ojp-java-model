@@ -337,7 +337,7 @@
                         <configuration>
                             <target>
                                 <copy file="${project.basedir}/package-info.java"
-                                    todir="${project.build.directory}/generated-sources/xjc/de/vdv/ojp20/model" overwrite="true"/>
+                                    todir="${project.build.directory}/generated-sources/xjc/de/vdv/ojp20" overwrite="true"/>
                             </target>
                         </configuration>
                     </execution>

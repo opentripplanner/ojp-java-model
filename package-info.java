@@ -10,7 +10,7 @@
         @jakarta.xml.bind.annotation.XmlNs(prefix = "opengis", namespaceURI = "http://www.opengis.net/gml/3.2"),
     }
 )
-package de.vdv.ojp20.model;
+package de.vdv.ojp20;
 
 import jakarta.xml.bind.annotation.XmlNs;
 import jakarta.xml.bind.annotation.XmlNsForm;
