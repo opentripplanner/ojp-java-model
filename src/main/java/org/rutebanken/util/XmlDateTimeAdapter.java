@@ -56,7 +56,7 @@ public class XmlDateTimeAdapter extends XmlAdapter<String, XmlDateTime> {
 	@Override
 	public String marshal(XmlDateTime inputDate) {
 		if(inputDate != null) {
-			return formatter.format(inputDate.atZone(ZoneId.of("UTC")));
+			return inputDate.toString();
 		} else {
 			return null;
 		}
