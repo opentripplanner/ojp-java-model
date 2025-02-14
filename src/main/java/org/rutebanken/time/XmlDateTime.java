@@ -48,7 +48,7 @@ public class XmlDateTime {
   @Override
   public String toString() {
     if(zonedDateTime != null) {
-      return zonedDateTime.format(DateTimeFormatter.ISO_DATE_TIME);
+      return zonedDateTime.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
     }
     else {
       return localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
