@@ -121,11 +121,6 @@
 	    <scope>runtime</scope>
 	</dependency>
         <dependency>
-            <groupId>com.migesok</groupId>
-            <artifactId>jaxb-java-time-adapters</artifactId>
-            <version>${jaxb.java.time.adapters.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
             <version>${glassfish-jaxb.version}</version>

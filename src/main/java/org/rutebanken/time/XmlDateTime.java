@@ -3,10 +3,11 @@ package org.rutebanken.time;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 /**
- * A wrapper type to represent the fact that xml xml dateTime can both include local and zoned
+ * A wrapper type to represent the fact that the XML dateTime can both include local and zoned
  * date times.
  */
 public class XmlDateTime {
@@ -43,10 +44,10 @@ public class XmlDateTime {
   @Override
   public String toString() {
     if(zonedDateTime != null) {
-      return zonedDateTime.toString();
+      return zonedDateTime.format(DateTimeFormatter.ISO_DATE_TIME);
     }
     else {
-      return localDateTime.toString();
+      return localDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
     }
   }
 }
