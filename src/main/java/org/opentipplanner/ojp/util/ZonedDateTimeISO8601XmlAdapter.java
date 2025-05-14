@@ -13,31 +13,29 @@
  * limitations under the Licence.
  */
 
-package org.rutebanken.util;
+package org.opentripplanner.ojp.util;
 
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
 
-public class LocalDateXmlAdapter extends XmlAdapter<String, LocalDateTime> {
-	private static final DateTimeFormatter formatter = new DateTimeFormatterBuilder().appendPattern("yyyy-MM-dd")
-			.optionalStart().appendPattern("XXXXX").optionalEnd()
-            .parseDefaulting(ChronoField.HOUR_OF_DAY, 0)
-            .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
-            .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
-            .parseDefaulting(ChronoField.OFFSET_SECONDS,OffsetDateTime.now().getLong(ChronoField.OFFSET_SECONDS) )
-            .toFormatter();
+public class ZonedDateTimeISO8601XmlAdapter extends XmlAdapter<String, ZonedDateTime> {
+
+	private final static DateTimeFormatter formatter = new DateTimeFormatterBuilder().appendPattern("yyyy-MM-dd'T'HH:mm:ss").appendOffsetId()
+//
+	.parseDefaulting(ChronoField.OFFSET_SECONDS,OffsetDateTime.now().getLong(ChronoField.OFFSET_SECONDS) ).toFormatter();
 
 	@Override
-	public LocalDateTime unmarshal(String inputDate) {
-		return LocalDateTime.parse(inputDate, formatter);
+	public ZonedDateTime unmarshal(String inputDate) throws Exception {
+		return ZonedDateTime.parse(inputDate, formatter);
+
 	}
 
 	@Override
-	public String marshal(LocalDateTime inputDate) {
+	public String marshal(ZonedDateTime inputDate) throws Exception {
 		if(inputDate != null) {
 			return formatter.format(inputDate);
 		} else {

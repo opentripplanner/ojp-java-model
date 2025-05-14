@@ -1,4 +1,4 @@
-package org.rutebanken.util;
+package org.opentripplanner.ojp.util;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

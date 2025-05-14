@@ -1,4 +1,4 @@
-package org.rutebanken.time;
+package org.opentripplanner.ojp.time;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

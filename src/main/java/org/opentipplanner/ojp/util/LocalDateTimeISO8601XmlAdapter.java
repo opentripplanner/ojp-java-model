@@ -13,50 +13,35 @@
  * limitations under the Licence.
  */
 
-package org.rutebanken.util;
+package org.opentripplanner.ojp.util;
 
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
-import org.rutebanken.time.XmlDateTime;
 
-public class XmlDateTimeAdapter extends XmlAdapter<String, XmlDateTime> {
+public class LocalDateTimeISO8601XmlAdapter extends XmlAdapter<String, LocalDateTime> {
 
-	public static final DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-		.parseCaseInsensitive()
-		.parseLenient()
-		.append(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
-		.optionalStart()
-		.parseStrict()
-		.appendOffset("+HH:MM:ss", "Z")
-		.parseLenient()
-		.optionalEnd()
-		.optionalStart()
-		.appendOffset("+HHmmss", "Z")
-		.optionalEnd()
-		.toFormatter();
+	private static final DateTimeFormatter formatter = new DateTimeFormatterBuilder().appendPattern("yyyy-MM-dd'T'HH:mm:ss")
+			.optionalStart().appendFraction(ChronoField.MILLI_OF_SECOND, 0, 3, true).optionalEnd()
+			.optionalStart().appendPattern("XXXXX")
+            .optionalEnd()
+			
+//
+	.parseDefaulting(ChronoField.OFFSET_SECONDS,OffsetDateTime.now().getLong(ChronoField.OFFSET_SECONDS) ).toFormatter();
 
 	@Override
-	public XmlDateTime unmarshal(String inputDate) {
-		var temporal = formatter.parse(inputDate);
-		if(temporal.isSupported(ChronoField.OFFSET_SECONDS)) {
-			var zdt = ZonedDateTime.from(temporal);
-			return new XmlDateTime(zdt);
-		}
-		else {
-			var ldt = LocalDateTime.from(temporal);
-			return new XmlDateTime(ldt);
-		}
+	public LocalDateTime unmarshal(String inputDate) {
+		return LocalDateTime.parse(inputDate, formatter);
+
 	}
 
 	@Override
-	public String marshal(XmlDateTime inputDate) {
+	public String marshal(LocalDateTime inputDate) {
 		if(inputDate != null) {
-			return inputDate.toString();
+			return formatter.format(inputDate);
 		} else {
 			return null;
 		}
