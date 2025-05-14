@@ -13,7 +13,7 @@
  * limitations under the Licence.
  */
 
-package org.rutebanken.util;
+package org.opentripplanner.ojp.util;
 
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.LocalDateTime;
@@ -22,7 +22,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
-import org.rutebanken.time.XmlDateTime;
+import org.opentripplanner.ojp.time.XmlDateTime;
 
 public class XmlDateTimeAdapter extends XmlAdapter<String, XmlDateTime> {
 

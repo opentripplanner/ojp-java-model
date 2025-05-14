@@ -13,7 +13,7 @@
  * limitations under the Licence.
  */
 
-package org.rutebanken.netex;
+package org.opentripplanner.ojp.netex;
 
 import org.apache.commons.lang3.builder.ToStringStyle;
 

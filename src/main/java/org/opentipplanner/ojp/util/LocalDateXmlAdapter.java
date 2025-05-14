@@ -13,7 +13,7 @@
  * limitations under the Licence.
  */
 
-package org.rutebanken.util;
+package org.opentripplanner.ojp.util;
 
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.LocalDateTime;
