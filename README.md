@@ -13,7 +13,7 @@ This project is available in the central maven repository, see https://central.s
 For example, to use this in a maven project use:
 ```xml
 <dependency>
-    <groupId>de.vdv</groupId>
+    <groupId>org.opentripplanner</groupId>
     <artifactId>ojp-java-model</artifactId>
     <version>1.0.3</version>
 </dependency>
