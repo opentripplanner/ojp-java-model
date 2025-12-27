@@ -16,16 +16,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.vdv</groupId>
+    <groupId>org.opentripplanner</groupId>
     <artifactId>ojp-java-model</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>2.0.2</version>
 
     <name>ojp-java-model</name>
     <description>Generates Java model from OJP xsds using jaxb.</description>
     <url>https://github.com/bliksemlabs/ojp-java-model</url>
     <organization>
-        <name>Bliksem Labs B.V.</name>
-        <url>http://www.bliksemlabs.com/</url>
+        <name>OpenTripPlanner</name>
+        <url>https://www.opentripplanner.org/</url>
     </organization>
     <licenses>
         <license>
@@ -43,9 +43,9 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:ssh://git@github.com/bliksemlabs/ojp-java-model.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/bliksemlabs/ojp-java-model.git</developerConnection>
-        <url>https://github.com/bliksemlabs/ojp-java-model/tree/master</url>
+        <connection>scm:git:ssh://git@github.com/opentripplanner/ojp-java-model.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/opentripplanner/ojp-java-model.git</developerConnection>
+        <url>https://github.com/opentripplanner/ojp-java-model/</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -534,7 +534,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>ossrh</serverId>
-                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <!-- Set this to true and the release will automatically proceed and sync to Central Repository will follow  -->
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
