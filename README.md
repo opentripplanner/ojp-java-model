@@ -8,13 +8,13 @@ You need xmlstarlet installed.
 
 
 ## Maven central
-This project is available in the central maven repository, see https://central.sonatype.com/search?q=g%3Ade.vdv&smo=true
+This project is available in the central maven repository, see https://central.sonatype.com/artifact/org.opentripplanner/ojp-java-model
 
-For example, to use this in a maven project use:
+For example, to use this in a Maven project use:
 ```xml
 <dependency>
     <groupId>org.opentripplanner</groupId>
     <artifactId>ojp-java-model</artifactId>
-    <version>1.0.3</version>
+    <version>2.0.2</version>
 </dependency>
 ```
