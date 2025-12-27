@@ -8,6 +8,7 @@
         @jakarta.xml.bind.annotation.XmlNs(prefix = "siri", namespaceURI = "http://www.siri.org.uk/siri"),
         @jakarta.xml.bind.annotation.XmlNs(prefix = "netex", namespaceURI = "http://www.netex.org.uk/netex"),
         @jakarta.xml.bind.annotation.XmlNs(prefix = "opengis", namespaceURI = "http://www.opengis.net/gml/3.2"),
+        @jakarta.xml.bind.annotation.XmlNs(prefix = "xsi", namespaceURI = "http://www.w3.org/2001/XMLSchema-instance"),
     }
 )
 package de.vdv.ojp20;
