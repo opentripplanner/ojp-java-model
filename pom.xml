@@ -13,12 +13,11 @@
   ~ limitations under the Licence.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.opentripplanner</groupId>
   <artifactId>ojp-java-model</artifactId>
-  <version>2.0.3-SNAPSHOT</version>
+  <version>2.0.3</version>
 
   <name>ojp-java-model</name>
   <description>Generates Java model from OJP xsds using jaxb.</description>
@@ -46,7 +45,7 @@
     <connection>scm:git:ssh://git@github.com/opentripplanner/ojp-java-model.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/opentripplanner/ojp-java-model.git</developerConnection>
     <url>https://github.com/opentripplanner/ojp-java-model/</url>
-    <tag>HEAD</tag>
+    <tag>2.0.3</tag>
   </scm>
 
   <properties>
@@ -97,7 +96,7 @@
     <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
 
     <!-- empty argLine property, the value is set up by Jacoco during unit tests execution -->
-    <argLine/>
+    <argLine />
 
     <!-- GPG configuration for jar signing-->
     <gpg.executable>gpg</gpg.executable>
@@ -337,8 +336,7 @@
             </goals>
             <configuration>
               <target>
-                <copy file="${project.basedir}/package-info.java"
-                  todir="${project.build.directory}/generated-sources/xjc/de/vdv/ojp20" overwrite="true"/>
+                <copy file="${project.basedir}/package-info.java" todir="${project.build.directory}/generated-sources/xjc/de/vdv/ojp20" overwrite="true" />
               </target>
             </configuration>
           </execution>
@@ -409,7 +407,7 @@
               <goal>check</goal>
             </goals>
             <configuration>
-              <rules/>
+              <rules />
             </configuration>
           </execution>
         </executions>
