@@ -1,15 +1,20 @@
-changelog:
-  categories:
-    - title: Breaking changes
-      labels:
-        - "Breaking change"
-    - title: Bugfixes
-      labels:
-        - bug
-    - title: Dependency upgrades
-      labels:
-        - dependencies
-    - title: Non-breaking changes
-      labels:
-        - "*"
+name: Create Github release
 
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
