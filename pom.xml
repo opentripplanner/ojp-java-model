@@ -21,7 +21,7 @@
 
   <name>ojp-java-model</name>
   <description>Generates Java model from OJP xsds using jaxb.</description>
-  <url>https://github.com/bliksemlabs/ojp-java-model</url>
+  <url>https://github.com/opentripplanner/ojp-java-model</url>
   <organization>
     <name>OpenTripPlanner</name>
     <url>https://www.opentripplanner.org/</url>
@@ -35,10 +35,8 @@
   </licenses>
   <developers>
     <developer>
-      <name>Stefan de Konink</name>
-      <email>stefan@konink.de</email>
-      <organization>Bliksem Labs B.V.</organization>
-      <organizationUrl>http://www.bliksemlabs.com</organizationUrl>
+      <name>Leonard Ehrenfried</name>
+      <email>mail@leonard.io</email>
     </developer>
   </developers>
   <scm>
