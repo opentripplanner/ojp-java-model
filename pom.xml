@@ -86,11 +86,8 @@
     <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
     <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
     <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-    <maven-site-plugin.version>3.10.0</maven-site-plugin.version>
     <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
     <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-
-    <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
 
     <!-- empty argLine property, the value is set up by Jacoco during unit tests execution -->
     <argLine />
@@ -197,10 +194,6 @@
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>${maven-install-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>${maven-site-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
@@ -367,7 +360,7 @@
         <version>${maven-release-plugin.version}</version>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <releaseProfiles>release,sign</releaseProfiles>
+          <releaseProfiles>sign</releaseProfiles>
           <goals>deploy</goals>
           <tagNameFormat>@{project.version}</tagNameFormat>
         </configuration>
@@ -379,35 +372,6 @@
         <configuration>
           <argLine>@{argLine} -Xms500m -Xmx500m -Xss512k</argLine>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${jacoco-maven-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>default-prepare-agent</id>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>default-report</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>default-check</id>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <configuration>
-              <rules />
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
