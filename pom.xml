@@ -66,7 +66,6 @@
     <xjc.guava.plugin.version>0.3.1</xjc.guava.plugin.version>
 
     <!-- Other dependencies versions -->
-    <slf4j.version>1.7.32</slf4j.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
 
     <!-- Unit test frameworks versions -->
@@ -150,15 +149,6 @@
   </dependencies>
 
   <build>
-    <extensions>
-      <!-- maven3 will need wagon-ssh extension in order to be able to release,
-      Using external variant in order to retain keys, etc -->
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ssh-external</artifactId>
-        <version>2.10</version>
-      </extension>
-    </extensions>
     <pluginManagement>
       <plugins>
         <plugin>
