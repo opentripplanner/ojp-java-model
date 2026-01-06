@@ -2,7 +2,7 @@
     namespace = "http://www.vdv.de/ojp",
     elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED,
     xmlns = {
-        @jakarta.xml.bind.annotation.XmlNs(prefix = "ojp", namespaceURI = "http://www.vdv.de/ojp"),
+        @jakarta.xml.bind.annotation.XmlNs(prefix = "", namespaceURI = "http://www.vdv.de/ojp"),
         @jakarta.xml.bind.annotation.XmlNs(prefix = "ifopt", namespaceURI = "http://www.ifopt.org.uk/ifopt"),
         @jakarta.xml.bind.annotation.XmlNs(prefix = "acsb", namespaceURI = "http://www.ifopt.org.uk/acsb"),
         @jakarta.xml.bind.annotation.XmlNs(prefix = "siri", namespaceURI = "http://www.siri.org.uk/siri"),
