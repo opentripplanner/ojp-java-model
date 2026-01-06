@@ -25,7 +25,7 @@ public class XmlDateTime {
 
   /**
    * Converts the abstract XML dateTime into a {@link ZonedDateTime}. If the underlying date time
-   * was already zoned, then it is converted to the same instant but in the specified zoned.
+   * was already zoned, then it is converted to the same instant but in the specified zone.
    */
   public ZonedDateTime atZone(ZoneId zoneId) {
     return zonedDateTime != null ? zonedDateTime.withZoneSameInstant(zoneId) : localDateTime.atZone(zoneId);
@@ -39,7 +39,7 @@ public class XmlDateTime {
   }
 
   /**
-   * Returns true if the date time did no include a zone id (time zone).
+   * Returns true if the date time did not include a zone id (time zone).
    */
   public boolean isLocal() {
     return localDateTime != null;
