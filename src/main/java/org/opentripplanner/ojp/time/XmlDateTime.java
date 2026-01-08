@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
 /**
@@ -21,6 +22,13 @@ public class XmlDateTime {
 
   public XmlDateTime(LocalDateTime localDateTime) {
     this.localDateTime = Objects.requireNonNull(localDateTime);
+  }
+
+  /**
+   * Return a truncated version of the given date time with millisecond precision.
+   */
+  public static XmlDateTime truncatedToMillis(ZonedDateTime dateTime) {
+    return new XmlDateTime(dateTime.truncatedTo(ChronoUnit.MILLIS));
   }
 
   /**
