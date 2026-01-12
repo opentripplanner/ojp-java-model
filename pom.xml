@@ -57,7 +57,7 @@
 
     <!-- JAXB components versions -->
     <jakarta-xml-bind.version>4.0.4</jakarta-xml-bind.version>
-    <glassfish-jaxb.version>4.0.5</glassfish-jaxb.version>
+    <glassfish-jaxb.version>4.0.6</glassfish-jaxb.version>
     <jaxb.fluent.api.version>2.1.8</jaxb.fluent.api.version>
     <jaxb.java.time.adapters.version>1.1.3</jaxb.java.time.adapters.version>
 
@@ -103,7 +103,7 @@
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
-      <version>4.0.0</version>
+      <version>4.0.6</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
