@@ -13,7 +13,7 @@
  * limitations under the Licence.
  */
 
-package org.opentripplanner.ojp.netex;
+package org.opentripplanner.ojp.util;
 
 import org.apache.commons.lang3.builder.ToStringStyle;
 

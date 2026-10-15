@@ -8,7 +8,6 @@ module org.opentripplanner.ojp {
     exports org.opentripplanner.ojp.schema.gml;
     exports org.opentripplanner.ojp.schema.acsb;
     exports org.opentripplanner.ojp.schema.ifopt;
-    exports org.opentripplanner.ojp.netex;
     exports org.opentripplanner.ojp.time;
     exports org.opentripplanner.ojp.util;
 

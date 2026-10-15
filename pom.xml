@@ -239,7 +239,7 @@
                   <extensionArgs>
                     <extensionArg>-Xbug986</extensionArg>
                     <extensionArg>-Xfluent-api</extensionArg>
-                    <extensionArg>-Xts:style:org.opentripplanner.ojp.netex.OmitNullsToStringStyle.INSTANCE
+                    <extensionArg>-Xts:style:org.opentripplanner.ojp.util.OmitNullsToStringStyle.INSTANCE
                     </extensionArg>
                   </extensionArgs>
                 </xsdOption>
