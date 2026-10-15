@@ -98,12 +98,6 @@
       <version>${jakarta-xml-bind.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-impl</artifactId>
-      <version>4.0.9</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
       <groupId>org.glassfish.jaxb</groupId>
       <artifactId>jaxb-runtime</artifactId>
       <version>${glassfish-jaxb.version}</version>
@@ -279,7 +273,7 @@
             </goals>
             <configuration>
               <target>
-                <copy file="${project.basedir}/package-info.java" todir="${project.build.directory}/generated-sources/xjc/de/vdv/ojp20" overwrite="true" />
+                <copy file="${project.basedir}/package-info.java" todir="${project.build.directory}/generated-sources/xjc/org/opentripplanner/ojp/schema/ojp" overwrite="true" />
               </target>
             </configuration>
           </execution>
