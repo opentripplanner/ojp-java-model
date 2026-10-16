@@ -20,14 +20,35 @@
 
   <jxb:bindings schemaLocation="./src/main/resources/xsd/2.0/OJP.xsd">
     <jxb:schemaBindings>
-      <jxb:package name="de.vdv.ojp20" />
+      <jxb:package name="org.opentripplanner.ojp.schema.ojp" />
     </jxb:schemaBindings>
   </jxb:bindings>
-  <!-- the netex-java-model already defines the siri types in uk.org.siri which leads to clashes.
-       therefore we put the generate siri types into a sub-package of de.vdv.ojp -->
+  <!-- All generated types live under org.opentripplanner.ojp.schema.<standard>. The netex-java-model and
+       siri-java-model already define types in uk.org.siri, net.opengis.gml._3 etc., so keeping our own root
+       avoids split packages on the module path. -->
   <jxb:bindings schemaLocation="./src/main/resources/xsd/2.0/siri/xsd/siri_model/siri_all.xsd">
     <jxb:schemaBindings>
-      <jxb:package name="de.vdv.ojp20.siri" />
+      <jxb:package name="org.opentripplanner.ojp.schema.siri" />
+    </jxb:schemaBindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="./src/main/resources/xsd/2.0/siri/xsd/datex2/DATEXIISchema.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="org.opentripplanner.ojp.schema.datex2" />
+    </jxb:schemaBindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="./src/main/resources/xsd/2.0/siri/xsd/gml/gml_extract_all_objects.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="org.opentripplanner.ojp.schema.gml" />
+    </jxb:schemaBindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="./src/main/resources/xsd/2.0/siri/xsd/acsb/acsb_all.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="org.opentripplanner.ojp.schema.acsb" />
+    </jxb:schemaBindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="./src/main/resources/xsd/2.0/siri/xsd/ifopt/ifopt_allStopPlace.xsd">
+    <jxb:schemaBindings>
+      <jxb:package name="org.opentripplanner.ojp.schema.ifopt" />
     </jxb:schemaBindings>
   </jxb:bindings>
 </jxb:bindings>

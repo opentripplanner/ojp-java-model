@@ -11,7 +11,7 @@
         @jakarta.xml.bind.annotation.XmlNs(prefix = "xsi", namespaceURI = "http://www.w3.org/2001/XMLSchema-instance"),
     }
 )
-package de.vdv.ojp20;
+package org.opentripplanner.ojp.schema.ojp;
 
 import jakarta.xml.bind.annotation.XmlNs;
 import jakarta.xml.bind.annotation.XmlNsForm;
